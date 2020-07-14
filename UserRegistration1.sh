@@ -28,8 +28,7 @@ fi
 ##Valid Email
 echo "Enter Email Id:"
 read EMAIL;
-PAT2="^[0-9a-zA-Z]+([+_-.][0-9a-zA-Z]+)*@[a-zA-Z0-9]+.[a-zA-Z,]{2,4}([.][0-9a-zA-Z,]{2})";
-
+PAT2="^[a-zA-Z0-9]{2,}[@][a-zA-Z]{2,}[.][a-zA-Z]{2,3}[.][a-z]{2}$"
 if [[ $EMAIL =~ $PAT2 ]]
 then
         echo "Email Is Valid";
@@ -41,7 +40,7 @@ fi
 #validate Phone Number
 echo "Enter The Phone Number:"
 read PNUMBER;
-PAT3="^[1-9]{2} [ ]?[0-9]{10}$";
+PAT3="^[1-9]{2} [ ][0-9]{10}$";
 
 if [[ $PNUMBER =~ $PAT3 ]]
 then
